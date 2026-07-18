@@ -67,7 +67,7 @@ static void MX_GPIO_Init(void)
 
 void SystemClock_Config(void)
 {
-    // Để trống nếu project của lab không yêu cầu cấu hình clock.
+    
 }
 
 void SysTick_Handler(void)
