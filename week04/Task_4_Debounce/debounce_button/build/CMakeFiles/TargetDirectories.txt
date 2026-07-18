@@ -1,0 +1,3 @@
+C:/Users/HuyNhat/mliot-embeddedc-2026-hw/week04/Task_4_Debounce/debounce_button/build/CMakeFiles/gpio_blink.dir
+C:/Users/HuyNhat/mliot-embeddedc-2026-hw/week04/Task_4_Debounce/debounce_button/build/CMakeFiles/edit_cache.dir
+C:/Users/HuyNhat/mliot-embeddedc-2026-hw/week04/Task_4_Debounce/debounce_button/build/CMakeFiles/rebuild_cache.dir

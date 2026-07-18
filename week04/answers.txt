@@ -1,0 +1,21 @@
+Task 1:
+Task 1.1:
+--> Ở chế độ GPIO Output Push-Pull, chân GPIO được điều khiển bởi hai transistor MOSFET: PMOS nối với nguồn VDD (3.3V) 
+và NMOS nối với GND. Khi xuất mức logic 1, PMOS dẫn và NMOS ngắt, chân GPIO được nối lên 3.3V. Khi xuất mức logic 0,
+PMOS ngắt và NMOS dẫn, chân GPIO được nối xuống GND. Hai transistor không được phép dẫn đồng thời để tránh tạo ngắn mạch trực tiếp
+giữa VDD và GND.
+Task 1.2:
+--> Chế độ Input Pull-up được sử dụng khi cần giữ chân đầu vào ở mức logic 1 mặc định, ví dụ trong mạch nút nhấn hoặc các tín hiệu kiểu 
+Open-Drain/Open-Collector. Khi chưa có tác động, điện trở Pull-up sẽ kéo chân GPIO lên mức cao; khi nút nhấn được nhấn, chân sẽ bị 
+kéo xuống GND và đọc được mức thấp.
+
+--> Nếu chân GPIO được cấu hình là Input Floating và không kết nối với bất kỳ tín hiệu nào, chân sẽ ở trạng thái floating (treo), rất 
+dễ bị ảnh hưởng bởi nhiễu điện từ hoặc điện tích môi trường. Vì vậy, giá trị đọc từ thanh ghi dữ liệu đầu vào sẽ không ổn định, 
+có thể thay đổi ngẫu nhiên giữa mức 0 và 1, dẫn đến kết quả đọc không đáng tin cậy.
+Task 2:
+Sau khi reset, ST mặc định tắt clock của hầu hết các ngoại vi để giảm tiêu thụ điện năng, hạn chế hoạt động không cần thiết và cho 
+phép người lập trình chỉ kích hoạt những ngoại vi thực sự sử dụng.
+
+Nếu cấu hình các thanh ghi của GPIO nhưng quên bật clock cho cổng GPIO tương ứng, khối ngoại vi vẫn ở trạng thái 
+không hoạt động nên các thao tác ghi vào thanh ghi cấu hình sẽ không có hiệu lực. Kết quả là GPIO không được cấu hình đúng, 
+LED không điều khiển được, tín hiệu đầu vào không đọc được và chương trình sẽ hoạt động sai mặc dù mã nguồn không báo lỗi biên dịch.

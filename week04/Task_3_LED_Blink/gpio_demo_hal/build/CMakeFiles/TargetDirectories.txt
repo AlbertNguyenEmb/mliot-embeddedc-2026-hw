@@ -1,0 +1,3 @@
+C:/Users/HuyNhat/mliot-embeddedc-2026-hw/week04/Task_3_LED_Blink/gpio_demo_hal/build/CMakeFiles/gpio_blink.dir
+C:/Users/HuyNhat/mliot-embeddedc-2026-hw/week04/Task_3_LED_Blink/gpio_demo_hal/build/CMakeFiles/edit_cache.dir
+C:/Users/HuyNhat/mliot-embeddedc-2026-hw/week04/Task_3_LED_Blink/gpio_demo_hal/build/CMakeFiles/rebuild_cache.dir
