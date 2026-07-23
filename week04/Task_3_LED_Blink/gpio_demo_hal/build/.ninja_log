@@ -1,9 +1,7 @@
 # ninja log v7
-32	118	8060526610464714	CMakeFiles/gpio_blink.dir/startup_stm32f103xb.s.obj	bd3e00a3c734e980
-23	181	8060526610241799	CMakeFiles/gpio_blink.dir/system_stm32f1xx.c.obj	f25d78827612ba65
-14	402	8060526610241799	CMakeFiles/gpio_blink.dir/main.c.obj	c5341aa21923e674
-39	403	8060526610464714	CMakeFiles/gpio_blink.dir/STM32CubeF1/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj	572e8bfce2a690a9
-48	413	8060526610597210	CMakeFiles/gpio_blink.dir/STM32CubeF1/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj	ef77774e65c64502
-56	413	8060526610676204	CMakeFiles/gpio_blink.dir/STM32CubeF1/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj	be145e7d9abd7da5
-65	418	8060526610786917	CMakeFiles/gpio_blink.dir/STM32CubeF1/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj	b22793c5b09d5558
-418	588	8060526614324125	gpio_blink.elf	f4128d3fcac55263
+30	98	8065153940149438	CMakeFiles/gpio_blink.dir/startup_stm32f103xb.s.obj	bd3e00a3c734e980
+22	114	8065153940097732	CMakeFiles/gpio_blink.dir/system_stm32f1xx.c.obj	f25d78827612ba65
+39	163	8065153940273752	CMakeFiles/gpio_blink.dir/STM32CubeF1/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj	572e8bfce2a690a9
+47	170	8065153940345303	CMakeFiles/gpio_blink.dir/STM32CubeF1/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj	ef77774e65c64502
+57	182	8065153940455313	CMakeFiles/gpio_blink.dir/STM32CubeF1/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj	be145e7d9abd7da5
+66	195	8065153940572870	CMakeFiles/gpio_blink.dir/STM32CubeF1/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj	b22793c5b09d5558

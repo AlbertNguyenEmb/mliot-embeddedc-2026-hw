@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/HuyNhat/mliot-embeddedc-2026-hw/week04/Task_5_Matrix Keypad/matrix_keypad
+# Install script for directory: C:/Users/HuyNhat/mliot-embeddedc-2026-hw/week04/Task_5_Matrix_Keypad/matrix_keypad
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,7 +40,7 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/HuyNhat/mliot-embeddedc-2026-hw/week04/Task_5_Matrix Keypad/matrix_keypad/build/install_local_manifest.txt"
+  file(WRITE "C:/Users/HuyNhat/mliot-embeddedc-2026-hw/week04/Task_5_Matrix_Keypad/matrix_keypad/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -56,6 +56,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/HuyNhat/mliot-embeddedc-2026-hw/week04/Task_5_Matrix Keypad/matrix_keypad/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/HuyNhat/mliot-embeddedc-2026-hw/week04/Task_5_Matrix_Keypad/matrix_keypad/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

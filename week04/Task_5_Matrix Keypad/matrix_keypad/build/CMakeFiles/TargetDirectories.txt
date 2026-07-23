@@ -1,3 +1,0 @@
-C:/Users/HuyNhat/mliot-embeddedc-2026-hw/week04/Task_5_Matrix Keypad/matrix_keypad/build/CMakeFiles/gpio_blink.dir
-C:/Users/HuyNhat/mliot-embeddedc-2026-hw/week04/Task_5_Matrix Keypad/matrix_keypad/build/CMakeFiles/edit_cache.dir
-C:/Users/HuyNhat/mliot-embeddedc-2026-hw/week04/Task_5_Matrix Keypad/matrix_keypad/build/CMakeFiles/rebuild_cache.dir

@@ -19,3 +19,6 @@ phép người lập trình chỉ kích hoạt những ngoại vi thực sự s�
 Nếu cấu hình các thanh ghi của GPIO nhưng quên bật clock cho cổng GPIO tương ứng, khối ngoại vi vẫn ở trạng thái 
 không hoạt động nên các thao tác ghi vào thanh ghi cấu hình sẽ không có hiệu lực. Kết quả là GPIO không được cấu hình đúng, 
 LED không điều khiển được, tín hiệu đầu vào không đọc được và chương trình sẽ hoạt động sai mặc dù mã nguồn không báo lỗi biên dịch.
+
+Task 5:
+https://drive.google.com/file/d/1fyaf5rVamBTgmz_sFSk59j2xqNPOngiO/view?usp=sharing (Phần cứng sao em làm quài kh dc nên mong các đại ka hoan hỉ chấp nhận demo ạ...)
