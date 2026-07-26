@@ -1,0 +1,43 @@
+Task 1:
+Task 1.1:
+CMake: Là một công cụ mã nguồn mở giúp tự động hóa quá trình biên dịch phần mềm.
+Ninja: Là một công cụ tự động hóa hệ thống biên dịch, tự động quá file và chuyển sang mã nhị phân.
+Compiler (arm-none-eabi-gcc): Giúp dịch file .c sang mã máy ARM Cortex-M3.
+STM32_Programmer_CLI: Là công cụ nạp và giao tiếp vi điều khiển STM32 qua giao diện dòng lệnh
+Task 1.2:
+Đầu tiên, chúng ta sẽ viết logic cho file code .c, tiếp theo sẽ viết file CMake để biết sẽ làm gì ở
+các bước tiếp theo ví dụ như mở file nào dịch file nào... Sau đó Ninja sẽ đọc và thực hiện các nhiệm
+vụ đó bằng Compiler cho ra file biên dịch hex để STM32_Programmer_CLI nạp vào vi điều khiển.
+Task 2:
+Task 2.1:
+Tại sao chưa thể nạp các file .o xuống chip? 
+---> Vì mỗi file .o chỉ chứa một phần của chương trình, chưa biết vị trí cuối cùng của các hàm và 
+dữ liệu, chưa giải quyết các lời gọi giữa các file, và chưa biết bố trí vào bộ nhớ nào của STM32.
+File .bin khác .o ở điểm cốt lõi nào?
+---> .o: là mã máy chưa hoàn chỉnh, các tham chiếu chưa được liên kết và chưa có bố cục bộ nhớ cuối cùng.
+     .bin: là file mã máy mà sau khi Linker đã ghép tất cả các .o, giải quyết mọi tham chiếu, bố trí mã 
+            và dữ liệu theo linker script. Nó chỉ còn là dãy byte để ghi trực tiếp vào Flash của vi điều khiển.
+Task 2.2:
+Vai trò của Incremental Build là gì?
+Incremental Build giúp chỉ biên dịch lại những file đã thay đổi hoặc những file bị ảnh hưởng bởi sự thay đổi, 
+thay vì biên dịch toàn bộ dự án. Điều này giúp giảm đáng kể thời gian build, đặc biệt với các dự án có hàng trăm
+hoặc hàng nghìn file nguồn.
+Ninja biết file nào bị sửa bằng cách nào?
+Ninja dựa trên thời gian sửa đổi (timestamp) của các file và thông tin phụ thuộc (dependency graph) được tạo khi cấu hình dự án.
+Task 3:
+Task 3.1:
+LMA (Load Memory Address) là địa chỉ của dữ liệu khởi tạo trong Flash, nơi linker đặt giá trị ban đầu của các biến .data vào file firmware. Khi nạp chương trình, các giá trị này được ghi vào Flash và vẫn được giữ lại khi mất nguồn.
+
+VMA (Virtual/Runtime Memory Address) là địa chỉ mà chương trình sẽ truy cập khi chạy. Đối với .data, VMA nằm trong RAM vì các biến toàn cục có khởi tạo cần được phép đọc và ghi trong quá trình thực thi.
+
+Vùng .data cần cả hai địa chỉ vì:
+
+--> Giá trị khởi tạo phải được lưu lâu dài trong Flash (LMA).
+--> Biến phải được đặt trong RAM để CPU có thể thay đổi giá trị khi chương trình chạy (VMA).
+Startup Code sẽ sao chép dữ liệu từ LMA (_sidata) sang VMA (_sdata) trước khi hàm main() được gọi.
+Task 3.2:
+Lúc đó thì mọi biến trong .data sẽ không có giá trị khởi tạo đúng. Chúng sẽ chứa dữ liệu rác còn sót lại trong RAM, khiến chương trình có thể hoạt động sai hoặc lỗi ngay từ khi bắt đầu chạy. Đây chính là lý do Startup Code luôn phải sao chép dữ liệu từ LMA (_sidata trong Flash) sang VMA (_sdata trong RAM) trước khi main() được thực thi.
+Task 4:
+Task 4.1:
+cmake -S . -B build -G Ninja
+ninja -C build
